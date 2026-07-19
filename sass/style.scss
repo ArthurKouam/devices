@@ -1,0 +1,293 @@
+
+*{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.conteneur{
+    width: 100%;
+    padding: 20px 50px;
+
+    .title{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .header-img{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-img .img-profile{
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            overflow: hidden;
+            object-position: center;
+
+            img{
+                object-fit: cover;
+                object-position: center;
+                transform: translateX(-5px);
+            }
+        }
+    }
+
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 30px;
+
+        .menu-items span, span{
+            padding: 5px 19px;
+            border-radius: 40px;
+            border: 1px solid rgba(63, 63, 63, 1);
+            margin-left: 20px;
+            transition: all .5s;
+            font-size: 15px;
+        }
+
+        .menu-items span:hover, span:hover{
+            background-color: white;
+            color: rgb(4, 4, 4);
+            cursor: pointer;
+        }
+        
+        .menu-items span:nth-child(1){
+            margin-left: 0;
+            color: rgb(4, 4, 4);
+            background-color: white;
+        }
+    }
+
+    .principal-device{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        height: 330px;
+
+        .first{
+            grid-column: span 2;
+            background-image: url("assets/images/room.png");
+
+            .description{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                height: 70px;
+                background-color: transparent;
+                backdrop-filter: blur(10px);
+                padding: 0 40px;
+
+                .icon-img{
+                    display: flex;
+                    gap: 15px;
+
+                    span{
+                        padding: 7px;
+                        border: 1px solid rgba(255, 255, 255, 0.35);
+                        border-radius: 100%;
+                        cursor: pointer;
+                    }
+
+                    span img{
+                        width: 17px;
+                    }
+                }
+
+            }
+
+            .live{
+                position: absolute;
+                top: 40px;
+                right: 50px;
+                background-color: transparent;
+                backdrop-filter: blur(10px);
+                padding: 3px 15px;
+                border-radius: 8px;
+                color: black;
+            }
+
+            .live::before{
+                content: "";
+                display: inline-block ;
+                background-color: red;
+                border-radius: 100%;
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+        .img-cont{
+            border-radius: 40px;
+            overflow: hidden;
+            position: relative;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .second{
+            background-image: url("assets/images/musik.png");
+            grid-column: span 1;
+
+            .top-menu{
+                top: 0;
+                width: 100%;
+                height: 45px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                padding: 0 20px;
+                background-color: transparent;
+                backdrop-filter: blur(10px);
+            }
+
+            .bottom-menu{
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                height: 70px;
+                padding: 0 20px;
+                backdrop-filter: blur(10px);
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    width: 100%;
+                    align-items: center;
+
+
+                    .play{
+                        width: 35px;
+                        height: 35px;
+                        border-radius: 50%;
+                        background-color: rgba(10, 190, 214, 1);
+                        color: black;
+                        font-weight: bolder;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+
+                        span{
+                            border-color: black;
+
+                            border-left: 4px solid;
+                            border-top: 15px solid;
+                        }
+                    }
+
+                }
+            }
+
+            .bottom-menu::before{
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 70%;
+                display: block;
+                border: 2px solid rgb(10, 190, 214);
+                transform: translateY(-1px);
+            }
+            .bottom-menu::after{
+                content: "";
+                position: absolute;
+                top: 0;
+                right: 29%;
+                display: block;
+                height: 10px;
+                width: 10px;
+                transform: translateY(-5px);
+                background-color: rgb(10, 190, 214);
+                border-radius: 50%;
+            }
+        }
+
+    }
+
+    .other-device{
+
+        margin-top: 18px;
+        .other-conteneur{
+            margin-top: 18px;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            gap: 30px;
+
+            .img-contain{
+                height: 265px;
+                border-radius: 30px;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                overflow: hidden;
+
+                div{
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    position: absolute;
+                    padding: 0px 20px;
+                    background-color: transparent;
+                    padding-bottom: 2px;
+                    backdrop-filter: blur(10px);
+                    bottom: 0;
+                    height: 60px;
+                    width: 100%;
+                    font-weight: bold;
+
+                    span img{
+                        width: 30px;
+                        padding: 5px;
+                        transform: translate(0.5px, 2px);
+                    }
+
+                    .der{
+                        border-radius: 60%;
+                        background-color: transparent;
+                        backdrop-filter: blur(20px);
+                        background-color: rgba(0, 0, 0, 0.207);
+                    }
+
+                    .bla{
+                        color: black;
+                        font-weight: normal;
+                    }
+                }
+            }
+
+            .img-contain:nth-child(1){
+                background-image: url("assets/images/thermo.png");
+            }
+            .img-contain:nth-child(2){
+                background-image: url("assets/images/box.png");
+            }
+            .img-contain:nth-child(3){
+                background-image: url("assets/images/ligth.png");
+            }
+            .img-contain:nth-child(4){
+                background-image: url("assets/images/accilio.png");
+            }
+        
+        }
+        
+
+    }
+
+
+}
